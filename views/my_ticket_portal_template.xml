@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <template id="display_repair_requests_inherited_report_button" inherit_id="machine_repair_management.display_repair_requests">
+            <xpath expr="//table[hasclass('o_my_status_table')]" position="before">
+                <div class="row">
+                    <div class="form-group">
+                        <div class="col-sm-6">
+                            <a t-attf-href="/web?#view_type=kanban&amp;model=machine.repair.support&amp;menu_id=machine_repair_management_portal.main_top_sub_menu_portal_report&amp;action=machine_repair_management_portal.action_machine_repair_support_report" class="btn btn-info">Open Reports</a>
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+        </template>
+
+    <template id="portal_my_repair_request_mgt" name="Portal Menu: Machine Repair Requests" inherit_id="machine_repair_management.portal_my_repair_request" priority="28">
+        <xpath expr="//li[@t-if='repair_request_count']" position="attributes">
+            <attribute name="t-if"></attribute>
+        </xpath>
+    </template>
+    </data>
+</odoo>

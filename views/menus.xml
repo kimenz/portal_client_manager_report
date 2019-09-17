@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <menuitem 
+            name="Portal Report" 
+            id="top_main_menu_portal_report"
+            groups="base.group_portal" 
+            web_icon="machine_repair_management_portal,static/description/icon.png" 
+        />
+        <menuitem 
+            name="Portal Reports" 
+            id="main_menu_portal_report" 
+            groups="base.group_portal"
+            parent="top_main_menu_portal_report" 
+            sequence="1"
+        />
+        <menuitem 
+            name="Portal Reports" 
+            id="sub_menu_portal_report" 
+            groups="base.group_portal" 
+            parent="main_menu_portal_report" 
+            action="machine_repair_management_portal.action_machine_repair_support_report"
+            sequence="1" 
+        />
+        <menuitem 
+            name="Booked Maintenance" 
+            id="sub_menu_book_maintenance"
+            groups="base.group_portal" 
+            parent="main_menu_portal_report"
+            sequence="2" 
+            action="machine_repair_management_portal.action_project_task_book_maintenance"
+        />
+        <menuitem 
+            name="Go to Portal"
+            id="sub_menu_go_to_my_account"
+            groups="base.group_portal" 
+            parent="main_menu_portal_report"
+            sequence="3" 
+            action="machine_repair_management_portal.action_open_my_account_portal"
+        />
+    </data>
+</odoo>

@@ -1,0 +1,11 @@
+"id","name","model_id/id","group_id/id","perm_read","perm_write","perm_create","perm_unlink"
+"access_ir_menu_portal","access_ir_menu_portal","base.model_ir_ui_menu","base.group_portal",1,0,0,0
+"access_ir_model_portal","access_ir_model_portal","base.model_ir_model","base.group_portal",1,0,0,0
+"access_hr_employee_portal","hr_employee_portal","hr.model_hr_employee","base.group_portal",1,0,0,0
+"access_mail_activity_portal","mail_activity_portal","mail.model_mail_activity","base.group_portal",1,1,1,0
+"access_mail_channel_portal","mail_channel_portal","mail.model_mail_channel","base.group_portal",1,1,1,0
+"access_mail_alias_portal","mail_alias_portal","mail.model_mail_alias","base.group_portal",1,1,1,0
+"access_product_consume_part_portal","product_consume_part_portal","machine_repair_management.model_product_consume_part","base.group_portal",1,0,0,0
+"access_repair_estimation_lines_portal","repair_estimation_lines_portal","machine_repair_management.model_repair_estimation_lines","base.group_portal",1,0,0,0
+"access_material_purchase_requisition_portal","material_purchase_requisition_portal","material_purchase_requisitions.model_material_purchase_requisition","base.group_portal",1,0,0,0
+"access_res_state_city_portal","res_state_city_portal","br_base.model_res_state_city","base.group_portal",1,0,0,0

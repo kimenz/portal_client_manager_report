@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record id="action_machine_repair_support_report" model="ir.actions.act_window">
+            <field name="name">Machine Repair Report</field>
+            <field name="res_model">machine.repair.support</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">kanban,tree,calendar,form,pivot,graph</field>
+            <field name="help">Machine Repair Support Tree.</field>
+            <field name="context" eval="{'default_is_report_view': True}"/>
+        </record>
+        
+        <record id="action_open_my_account_portal" model="ir.actions.act_url">
+            <field name="name">My Account Portal</field>
+            <field name="target">self</field>
+            <field name="url">/my/home</field>
+            <field name="context" eval="{'is_show_work_order_task': True}"/>
+        </record>
+        
+        <record id="action_project_task_book_maintenance" model="ir.actions.act_window">
+            <field name="name">Book Maintenance</field>
+            <field name="res_model">project.task</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">kanban,tree,calendar,form,pivot,graph</field>
+            <field name="help">Book maintenance tree.</field>
+            <field name="domain">[('is_book_maintenance', '=', True)]</field>
+            <field name="context" eval="{'is_show_work_order_task': True}"/>
+        </record>
+        
+        <record id="machine_repair_inherited_work_order_smart_button" model="ir.ui.view">
+            <field name="name">machine.repair.support.inherit.smart_button</field>
+            <field name="model">machine.repair.support</field>
+            <field name="inherit_id" ref="machine_repair_management.machine_repair_support_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//button[@name='show_work_order_task']" position="attributes">
+                    <attribute name="context">{'is_show_work_order_task': True}</attribute>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
