@@ -1,36 +1,34 @@
 # -*- coding: utf-8 -*-
 
-# Part of Probuse Consulting Service Pvt Ltd. See LICENSE file for full copyright and licensing details.
-
 {
-    'name': "Machine Repair Management Portal",
+    'name': "Portal Client Manager Report",
     'price': 0.0,
-    'currency': 'EUR',
-    'license': 'Other proprietary',
-    'summary': """This module will show backend to portal user.""",
+    'currency': 'BRL',
+    'license': 'GPLv3',
+    'summary': """This module will show backend to portal user and acess to reporting.""",
     'description': """
-Machine Repair Request and Management Portal
+Clinical Engeneering Reporting for Client Managers
     - This module will show backend to portal user.
     """,
-    'author': "Probuse Consulting Service Pvt. Ltd.",
-    'website': "http://www.probuse.com",
-    'support': 'contact@probuse.com',
+    'author': "Kimenz",
+    'website': "http://www.kimenz.com",
+    'support': 'webmaster@kimenz.com',
     'version': '1.4',
-    'category' : 'Manufacturing',
+    'category' : 'HelpDesk',
     'depends': [
-        'machine_repair_management_extend',
-        'material_purchase_requisitions',
+        'helpdesk',
+        'field-service',
+        'agreement',
         'br_base'
     ],
     'data':[
         'security/ir.model.access.csv',
-        'views/machine_repair_support_view.xml',
+        'views/helpdesk_ticket_view.xml',
+        'views/field_service_order_view.xml',
         'views/my_ticket_portal_template.xml',
         'views/menus.xml',
-        'views/project_view.xml'
+        'views/contract_view.xml'
     ],
     'installable' : True,
     'application' : False,
 }
-
-# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
